@@ -116,7 +116,7 @@
 
 ### 1.创建文件夹ll
 
-![image-20210426153717035](D:\新建文件夹\oracle\test4\创建文件ll.png)
+![image-20210426153717035](创建文件ll.png)
 
 ### 2.使用系统用户创建表空间 Users04
 
@@ -130,11 +130,11 @@ datafile
 EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
 ```
 
-![image-20210426155119588](D:\新建文件夹\oracle\test4\创建表空间.png)
+![image-20210426155119588](创建表空间.png)
 
 ### 3.查看文件夹ll
 
-![image-20210426155354655](D:\新建文件夹\oracle\test4\查看ll文件.png)
+![image-20210426155354655](查看ll文件.png)
 
 ### 4.给用户user1授予表空间Users04的使用权限
 
@@ -142,7 +142,7 @@ EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
 ALTER USER user1 QUOTA UNLIMITED ON USERS04;
 ```
 
-![image-20210426155703636](D:\新建文件夹\oracle\test4\用户user1授予表空间权限.png)
+![image-20210426155703636](用户user1授予表空间权限.png)
 
 ### 5.删除表和序列
 
@@ -480,7 +480,7 @@ PARTITION BY RANGE (ORDER_DATE)
 );
 ```
 
-![image-20210426160520414](D:\新建文件夹\oracle\test4\创建表.png)
+![image-20210426160520414](创建表.png)
 
 ### 7、创建本地分区索引 ORDERS_INDEX_DATE
 
@@ -676,7 +676,7 @@ ADD CONSTRAINT ORDER_DETAILS_PRODUCT_NUM CHECK
 ENABLE;
 ```
 
-![image-20210426160806235](D:\新建文件夹\oracle\test4\创建本地分区索引.png)
+![image-20210426160806235](创建本地分区索引.png)
 
 ### 9.创建三个触发器
 
@@ -711,7 +711,7 @@ END;
 ALTER TRIGGER "ORDERS_TRIG_ROW_LEVEL" DISABLE;
 ```
 
-![image-20210426161221462](D:\新建文件夹\oracle\test4\禁用触发器.png)
+![image-20210426161221462](禁用触发器.png)
 
 
 
@@ -895,7 +895,7 @@ NOCOMPRESS;
 
 ```
 
-![image-20210426161450850](D:\新建文件夹\oracle\test4\插入数据.png)
+![image-20210426161450850](插入数据.png)
 
 ### 11.测试
 
@@ -907,11 +907,11 @@ select * from ORDER_DETAILS where  order_id=1;
 select * from VIEW_ORDER_DETAILS where order_id=1;
 ```
 
-![image-20210426161856835](D:\新建文件夹\oracle\test4\查询结果1.png)
+![image-20210426161856835](查询结果1.png)
 
-![image-20210426162008439](D:\新建文件夹\oracle\test4\查询结果2.png)
+![image-20210426162008439](查询结果2.png)
 
-![image-20210426162038098](D:\新建文件夹\oracle\test4\查询结果3.png)
+![image-20210426162038098](查询结果3.png)
 
 #### 2、递归查询某个员工及其所有下属，子下属员工
 
@@ -925,7 +925,7 @@ WITH A (EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTME
 SELECT * FROM A;
 ```
 
-![image-20210426162150982](D:\新建文件夹\oracle\test4\递归查询.png)
+![image-20210426162150982](递归查询.png)
 
 #### 3、特殊查询语句：
 
@@ -936,9 +936,9 @@ select TABLE_NAME,PARTITION_NAME,HIGH_VALUE,PARTITION_POSITION,TABLESPACE_NAME f
 select * from USER_IND_PARTITIONS;
 ```
 
-![image-20210426162504545](D:\新建文件夹\oracle\test4\查询分区表情况.png)
+![image-20210426162504545](查询分区表情况.png)
 
-![image-20210426162532327](D:\新建文件夹\oracle\test4\查询分区索引情况.png)
+![image-20210426162532327](查询分区索引情况.png)
 
 #### 4、查询一个分区中的数据
 
@@ -948,9 +948,9 @@ select count(*) from ORDERS partition(PARTITION_BEFORE_2016);
 select count(*) from ORDERS partition(PARTITION_BEFORE_2017);
 ```
 
-![image-20210426162727608](D:\新建文件夹\oracle\test4\查询分区中的数据1.png)
+![image-20210426162727608](查询分区中的数据1.png)
 
-![image-20210426162800397](D:\新建文件夹\oracle\test4\查询分区的数据2.png)
+![image-20210426162800397](查询分区的数据2.png)
 
 #### 5、统计用户的所有表
 
@@ -958,7 +958,7 @@ select count(*) from ORDERS partition(PARTITION_BEFORE_2017);
 exec dbms_stats.gather_schema_stats(User,estimate_percent=>100,cascade=> TRUE);
 ```
 
-![image-20210426163043220](D:\新建文件夹\oracle\test4\统计用户的所有表.png)
+![image-20210426163043220](统计用户的所有表.png)
 
 #### 6、统计完成后，查询表的统计信息
 
@@ -971,17 +971,17 @@ select * from orders where customer_name='zhang133000';
 select * from orders where order_date<to_date('2016-01-01','yyyy-mm-dd');
 ```
 
-![image-20210426163244199](D:\新建文件夹\oracle\test4\统计信息1.png)
+![image-20210426163244199](统计信息1.png)
 
-![image-20210426163318393](D:\新建文件夹\oracle\test4\统计信息2.png)
+![image-20210426163318393](统计信息2.png)
 
-![image-20210426163341101](D:\新建文件夹\oracle\test4\统计信息3.png)
+![image-20210426163341101](统计信息3.png)
 
-![image-20210426163426992](D:\新建文件夹\oracle\test4\统计信息4.png)
+![image-20210426163426992](统计信息4.png)
 
-![image-20210426163453618](D:\新建文件夹\oracle\test4\统计信息5.png)
+![image-20210426163453618](统计信息5.png)
 
-![image-20210426163517402](D:\新建文件夹\oracle\test4\统计信息6.png)
+![image-20210426163517402](统计信息6.png)
 
 #### 7.查看文件使用情况
 
@@ -989,7 +989,7 @@ select * from orders where order_date<to_date('2016-01-01','yyyy-mm-dd');
 select * from dba_data_files;
 ```
 
-![image-20210426163646262](D:\新建文件夹\oracle\test4\文件使用情况.png)
+![image-20210426163646262](文件使用情况.png)
 
 #### 8.空间使用情况
 
@@ -1011,8 +1011,8 @@ GROUP BY tablespace_name) b
 WHERE a.tablespace_name = b.tablespace_name;
 ```
 
-![image-20210426163832745](D:\新建文件夹\oracle\test4\空间使用情况.png)
+![image-20210426163832745](空间使用情况.png)
 
 #### 9.数据文件大小
 
-![image-20210426164010426](D:\新建文件夹\oracle\test4\数据文件大小.png)
+![image-20210426164010426](数据文件大小.png)
