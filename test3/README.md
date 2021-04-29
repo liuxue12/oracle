@@ -27,7 +27,7 @@ ALTER USER wanghao QUOTA UNLIMITED ON USERS02;
 ALTER USER wanghao QUOTA UNLIMITED ON USERS03;
 ```
 
-![image-20210406104908093](D:\新建文件夹\oracle\test3\表分区1.png)
+![image-20210406104908093](表分区1.png)
 
 		###    表创建及数据插入
 
@@ -154,7 +154,7 @@ PARTITION BY RANGE (ORDER_DATE)
 
 运行结果
 
-![image-20210406105721353](D:\新建文件夹\oracle\test3\orders表创建.png)
+![image-20210406105721353](orders表创建.png)
 
 
 
@@ -181,7 +181,7 @@ PARTITION BY REFERENCE (order_details_fk1);
 
 运行结果：
 
-![image-20210406110008196](D:\新建文件夹\oracle\test3\order_detail表创建.png)
+![image-20210406110008196](order_detail表创建.png)
 
 
 
@@ -256,7 +256,7 @@ end;
 
 运行结果：
 
-![image-20210406110203137](D:\新建文件夹\oracle\test3\插入数据.png)
+![image-20210406110203137](插入数据.png)
 
 
 
@@ -269,9 +269,9 @@ select count(*) from order_details;
 
 运行结果：
 
-![image-20210406110417982](D:\新建文件夹\oracle\test3\查询订单数据总数.png)
+![image-20210406110417982](查询订单数据总数.png)
 
-![image-20210406110522040](D:\新建文件夹\oracle\test3\查询订单详情数据总数.png)
+![image-20210406110522040](查询订单详情数据总数.png)
 
 
 
@@ -290,11 +290,11 @@ between to_date('2017-1-1','yyyy-mm-dd') and to_date('2018-6-1','yyyy-mm-dd');
 
 运行结果：
 
-![image-20210406110926951](D:\新建文件夹\oracle\test3\运行结果1.png)
+![image-20210406110926951](运行结果1.png)
 
 执行计划：
 
-![image-20210406111045132](D:\新建文件夹\oracle\test3\执行计划1.png)
+![image-20210406111045132](执行计划1.png)
 
 
 
@@ -308,11 +308,11 @@ a.order_date between to_date('2017-1-1','yyyy-mm-dd') and to_date('2018-6-1','yy
 
 运行结果：
 
-![image-20210406111320502](D:\新建文件夹\oracle\test3\运行结果2.png)
+![image-20210406111320502](运行结果2.png)
 
 执行计划：
 
-![image-20210406111412822](D:\新建文件夹\oracle\test3\执行计划2.png)
+![image-20210406111412822](执行计划2.png)
 
 
 
@@ -333,6 +333,6 @@ SELECT a.tablespace_name "表空间名",Total/1024/1024 "大小MB",
 
 运行结果：
 
-![image-20210406111613861](D:\新建文件夹\oracle\test3\执行结果1.png)
+![image-20210406111613861](执行结果1.png)
 
-![image-20210406111736725](D:\新建文件夹\oracle\test3\执行结果2.png)
+![image-20210406111736725](执行结果2.png)
