@@ -205,7 +205,7 @@ begin
 end;
 ```
 
-![image-20210426160037029](D:\新建文件夹\oracle\test4\删除表和序列.png)
+![image-20210426160037029](删除表和序列.png)
 
 ### 6、创建表 DEPARTMENTS、EMPLOYEES、PRODUCTS、ORDER_ID_TEMP、ORDERS
 
@@ -703,7 +703,7 @@ BEGIN
 END;
 ```
 
-![image-20210426161017786](D:\新建文件夹\oracle\test4\创建三个触发器.png)
+![image-20210426161017786](创建三个触发器.png)
 
 批量插入订单数据之前，禁用触发器
 
