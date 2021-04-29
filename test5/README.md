@@ -32,7 +32,7 @@ create or replace PACKAGE MyPack IS
 END MyPack;
 ```
 
-![image-20210426165019714](D:\新建文件夹\oracle\test5\创建包.png)
+![image-20210426165019714](创建包.png)
 
 #### 2.在 MyPack 中创建一个函数 SaleAmount ，查询部门表，统计每个部门的销售总金额，每个部门的销售额是由该部门的员工(ORDERS.EMPLOYEE_ID)完成的销售额之和。函数 SaleAmount 要求输入的参数是部门号，输出部门的销售金额。
 
@@ -70,7 +70,7 @@ PROCEDURE GET_EMPLOYEES(V_EMPLOYEE_ID NUMBER)
 END MyPack;
 ```
 
-![image-20210426165630547](D:\新建文件夹\oracle\test5\MyPack.png)
+![image-20210426165630547](MyPack.png)
 
 ####  4.由于订单只是按日期分区的，上述统计是全表搜索，因此统计速度会比较慢，如何提高统计的速度呢？
 
@@ -92,6 +92,6 @@ START WITH EMPLOYEE_ID = V_EMPLOYEE_ID
 CONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID
 ```
 
-![测试1](D:\新建文件夹\oracle\test5\测试1.png)
+![测试1](测试1.png)
 
-![测试2](D:\新建文件夹\oracle\test5\测试2.png)
+![测试2](测试2.png)
