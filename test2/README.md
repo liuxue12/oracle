@@ -37,7 +37,7 @@ SQL> exit
 
 > 语句“ALTER USER new_user QUOTA 50M ON users;”是指授权new_user用户访问users表空间，空间限额是50M。
 >
-> ![image-20210322195238691](D:\新建文件夹\oracle\test2\image-20210322195238691.png)
+> ![image-20210322195238691](image-20210322195238691.png)
 
 - 第2步：新用户new_user连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
 
@@ -63,7 +63,7 @@ Grant succeeded.
 SQL>exit
 ```
 
-![image-20210322195550324](D:\新建文件夹\oracle\test2\image-20210322195550324.png)
+![image-20210322195550324](image-20210322195550324.png)
 
 - 第3步：用户hr连接到pdborcl，查询new_user授予它的视图myview
 
@@ -77,7 +77,7 @@ wang
 SQL> exit
 ```
 
-![image-20210322195703232](D:\新建文件夹\oracle\test2\image-20210322195703232.png)
+![image-20210322195703232](image-20210322195703232.png)
 
 
 
